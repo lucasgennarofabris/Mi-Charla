@@ -1,0 +1,567 @@
+
+
+
+/* =========================================================
+   1 · LA PALETA DEL CURSO
+   Se escribe UNA sola vez, acá arriba. Todo lo demás usa var().
+   ========================================================= */
+:root {
+    /* Los seis colores de la identidad del CET */
+    --violeta: #2A2765;
+    --rojo-1: #DD2E26;
+    --cian: #12C2EC;
+    --amarillo: #ECDB14;
+    --azul-tec: #0A8BAA;
+    --azul: #345FAA;
+
+    /* Escala del violeta */
+    --violeta-900: #1B1942;
+    --violeta-800: #221F51;
+    --violeta-700: #343070;
+    --violeta-500: #4A4685;
+    --violeta-300: #6E6BA6;
+    --violeta-200: #9B99C4;
+    --violeta-100: #C3C1DD;
+    --violeta-50: #E0DFEE;
+    --violeta-25: #EFEFF7;
+
+    --texto: #2A2765;
+    --texto-suave: #504D75;
+    --blanco: #ffffff;
+    --rojo8: #C81D25;
+    --negro-carbon: #23231A;
+    --rojo-3: #421511;
+    --gris: #4C4746;
+    --rojo4: #7B151F;
+    --rojo5: #CD6771;
+    --rojo6: #801515;
+    --rojo7: #FFAAAA;
+    --e-1: 5px;
+    --e-3: 6px;
+    --azul-7: #143153;
+
+}
+
+/* =====================================================---blanco · LA PÁGINA ENTERA
+   display:flex + justify-content:center centran la tarjeta
+   en pantalla sin usar márgenes a ojo.
+   ========================================================= */
+body {
+    background: var(--blanco);
+    background-image: url(../bandera-de-argentina-argentina-bandera-realista-ilustración-3d.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    margin: 0;
+    padding: 0;
+    /*El margin hace que cambies el margen de la pagina*/
+    min-height: 100vh;
+    /*esto altera la altura del área visible de la pantalla*/
+    align-items: center;
+    /*Centra los elementos verticalmente en el eje secundario del contenedor Flexbox.*/
+    justify-content: center;
+    /*Centra los elementos horizontalmente en el eje principal del contenedor Flexbox.*/
+
+    /*Cambia el color de fondo de la tarjeta*/
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+    /*Cambia la fuente del texto*/
+    color: var(--texto);
+    /*Cambia el color de la letra de la tarjeta*/
+
+
+}
+
+img {
+    border: 3px solid var(--rojo4);
+    border-radius: 50%;
+}
+
+/* =========================================================
+   3 · LA TARJETA
+   ========================================================= */
+.tarjeta {
+    background: var(--violeta-25);
+    /*Cambia el color de fondo de la tarjeta*/
+    border-top: 8px solid var(--rojo);
+    /*Agrega una línea/borde superior de grosor, de estilo sólido y del color.*/
+    border-radius: 12px;
+    /*Redondea las cuatro esquinas de la tarjeta con un radio de 12 píxeles.*/
+    padding: 2.5rem 2rem;
+    /*Genera espacio interior dentro de la tarjeta: 2.5rem arriba/abajo y 2rem a los lados.*/
+    text-align: center;
+    /*Centra horizontalmente todo el texto contenido dentro de la tarjeta.*/
+    max-width: 420px;
+    /*Establece que la tarjeta no superará los 420 píxeles de ancho, aunque la pantalla sea más grande.*/
+}
+
+/* =========================================================
+   4 · CADA PARTE DE LA TARJETA
+   ========================================================= */
+.tarjeta__logo {
+    width: 72px;
+    /*Define el ancho fijo del logo en 72 píxeles.*/
+    height: 72px;
+    /*Define la altura fija del logo en 72 píxeles.*/
+    object-fit: contain;
+    /*Escala la imagen para que quepa completamente dentro del recuadro de 72x72px manteniendo su proporción original sin deformarse ni cortarse.*/
+}
+
+.tarjeta__curso {
+    margin: .75rem 0 0;
+    /*Asigna un margen exterior de 0.75rem arriba, 0 a la derecha/izquierda y 0 abajo.*/
+    font-size: .78rem;
+    /*Establece un tamaño de fuente pequeño (0.78rem).*/
+    font-weight: 600;
+    /*Ajusta el grosor o peso de la letra a semi-negrita (semi-bold).*/
+    letter-spacing: .16em;
+    /*Aumenta la separación horizontal entre las letras*/
+    text-transform: uppercase;
+    /*Convierte automáticamente todo el texto a mayúsculas.*/
+    color: var(--gris);
+    /*Cambia el color de letra de la tarjeta*/
+}
+
+.tarjeta__nombre {
+    margin: .4rem 0 0;
+    /*Aplica un margen superior de 0.4rem (0 a los lados y abajo).*/
+    font-size: 2.2rem;
+    /*Establece un tamaño de letra grande para destacar como título.*/
+    font-weight: 700;
+    /*Define el grosor de la letra como negrita (bold).*/
+    letter-spacing: -0.01em;
+    /*Reduce ligeramente el espacio entre letras para dar un aspecto más compacto al título.*/
+    color: var(--rojo-3);
+    /*Cambia el color de letra dentro de la tarjeta*/
+}
+
+.tarjeta__frase {
+    margin: 1rem 0 0;
+    /*Aplica un margen superior de 1rem.*/
+    font-size: 1.25rem;
+    /*Establece un tamaño de letra mediano.*/
+    line-height: 1.55;
+    /*Define la altura de línea (espaciado interlineal) al 155% del tamaño de la fuente para mejorar la legibilidad.*/
+    color: var(--negro-carbon);
+    /*Cambia el color del texto usando la variable*/
+}
+
+.tarjeta__autor {
+    margin: 1.25rem 0 0;
+    /*Aplica un margen superior de 1.25rem.*/
+    font-size: .82rem;
+    /*Define un tamaño de letra pequeño.*/
+    color: var(--texto-suave);
+    /*Asigna un color de texto atenuado*/
+    margin-bottom: 20px;
+}
+
+/* Variante oscura: mismo bloque, otra combinación de la paleta */
+.tarjeta--oscura {
+    background: var(--negro-carbon);
+    /*Cambia el color de fondo de la tarjeta*/
+    border-top-color: var(--cian);
+    /*Modifica únicamente el color del borde superior cambiándolo al valor*/
+}
+
+.tarjeta__pregunta {
+    margin: 0;
+    /*Cambia el margen de la tarjeta*/
+    font-size: .8rem;
+    /*Cambia el tamaño de la fuente*/
+    font-weight: 600;
+    /*Ajusta el grosor del texto a semi-negrita.*/
+    letter-spacing: .14em;
+    /*Agrega un espaciado en las letras*/
+    text-transform: uppercase;
+    /*Convierte el texto a mayúsculas.*/
+    color: var(--rojo-1);
+    /*Cambia el color de la letra*/
+}
+
+.tarjeta__respuesta {
+    margin: .5rem 0 0;
+    /*Aplica un margen superior de 0.5rem.*/
+    font-size: 1.4rem;
+    /*Define un tamaño de letra relativamente grande.*/
+    font-weight: 700;
+    /*Aplica estilo de letra negrita (bold).*/
+    color: var(--blanco);
+    /*Cambia el color de la letra*/
+
+}
+
+.tarjeta__boton {
+
+    display: inline-block;
+    margin-top: 2rem;
+    padding: .9rem 2rem;
+    border-radius: 999px;
+    background: var(--rojo4);
+    color: var(--rojo5);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.tarjeta__boton:hover {
+    background: var(--rojo7);
+}
+
+.tarjeta__boton:active {
+    background: var(--rojo6);
+}
+
+
+.tarjeta__boton:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* =========================================================
+   LA FICHA DE TU IDEA
+   ========================================================= */
+#ficha {
+    background-color: red;
+    background-image: url(../various-meats-grilling-for-traditional-argentine-asado.webp);
+}
+
+.ficha {
+    max-width: 520px;
+    margin: var(--e-6) auto;
+    /* 3rem arriba/abajo · auto a los lados = centrada */
+    padding: var(--e-5);
+    /* 2rem de aire adentro */
+    border: 1px solid var(--violeta-200);
+    border-top: 6px solid var(--rojo);
+    border-radius: 12px;
+    background: var(--violeta-25);
+    box-shadow: 28px 23px 32px -8px rgba(3, 3, 3, 0.75);
+    -webkit-box-shadow: 28px 23px 32px -8px rgba(3, 3, 3, 0.75);
+    -moz-box-shadow: 28px 23px 32px -8px rgba(3, 3, 3, 0.75);
+    padding: 20px;
+
+
+}
+
+.ficha__etiqueta {
+    margin: 0;
+    font-size: .75rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--rojo-2);
+}
+
+.ficha__titulo {
+    margin: var(--e-2) 0 var(--e-5);
+    font-size: 1.6rem;
+    line-height: 1.25;
+    color: var(--gris);
+}
+
+.ficha__campo {
+    margin: var(--e-4) 0 var(--e-1);
+    font-size: .72rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--negro-carbon);
+}
+
+.ficha__texto {
+    margin: 0;
+    line-height: 1.65;
+    color: var(--rojo4);
+}
+
+
+.ficha__tags {
+    margin: var(--e-5) 0 0;
+    padding: 0;
+    display: flex;
+    gap: var(--e-2);
+    list-style: none;
+}
+
+.ficha__tags li {
+    padding: var(--e-1) var(--e-3);
+    border-radius: 999px;
+    background: var(--violeta-100);
+    color: var(--rojo-2);
+    font-size: .8rem;
+}
+
+/* ideas */
+#ideas {
+    background-color: lightblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(../Argentina_\ Sol\ de\ Mayo\ Vintage.png);
+    background-position: center;
+}
+
+.container {
+
+    width: 1000px;
+    margin: 0 auto;
+    /*Top - Botton son 0px y auto para left y right  */
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+
+
+}
+
+.card {
+    background-color: yellow;
+    width: 360px;
+    text-align: center;
+    border: 3px solid orangered;
+    box-shadow: 19px 23px 21px -2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 19px 23px 21px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 19px 23px 21px -2px rgba(0, 0, 0, 0.75);
+
+}
+
+.card__imagen img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid rgb(20, 88, 89);
+}
+
+.card__titulo {
+    font-size: 1.7rem;
+    color: rgb(29, 75, 91);
+}
+
+.card__parrafo {
+    font-size: 1.3rem;
+    color: rgb(29, 75, 91);
+
+
+}
+
+span {
+    font-weight: bold;
+
+}
+
+.card__enlace {
+    margin: 1.4em;
+    font-size: 2em;
+    font-weight: 800em;
+    color: var(--rojo4);
+    border-radius: 10%;
+    text-decoration: none;
+    background-color: #99E2DA;
+    padding: 5px;
+    display: block;
+    color: #064E7D;
+
+}
+
+.card__enlace:hover {
+    background-color: #1e72ab;
+}
+
+.container-header {
+    background: #edb200;
+background: radial-gradient(circle,rgba(237, 178, 0, 1) 0%, rgba(255, 255, 255, 1) 35%, rgba(31, 240, 226, 1) 98%);
+display: flex;
+justify-content: space-between;
+align-items: center;/*Alinea verticalmente los hijos (nav)*/
+}
+.header__logo{
+    width: 150px;
+}
+.container-header nav{
+    padding: 15px;
+}
+.container-header nav ul{
+    list-style: none; /*List style elimina las viñetas de la lista*/
+    display: flex;
+    gap: 15px;
+}
+.container-header a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--negro-carbon) ;
+    font-size: 1.2rem;
+    transition: background-color 0.5s ease;
+}
+.container-header a:hover{
+    background-color:var(--blanco);
+    padding: 5px;
+    border-radius: 5px;
+}
+.header__logo img:hover{
+    padding: 15px;
+}
+
+footer {
+  background-color: #0b2545;
+  color: #ffffff;
+  padding: 40px 5% 20px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 30px;
+}
+
+.footer-top-col {
+  flex: 1;
+  min-width: 200px;
+  
+}
+
+.footer-top-col h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #ffffff;
+ 
+}
+
+.footer-top-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-top-col ul li {
+  margin-bottom: 10px;
+  
+}
+.footer-bottom-legal a {
+  color: #cbd5e1;
+  font-size: 14px;
+ 
+}
+.footer-bottom-legal a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-top-btn {
+  margin-top: 15px;
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+.footer-top-form-news {
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-top-form-news input[type="email"] {
+  padding: 8px 12px;
+  
+}
+
+.footer-top-form-news input[type="submit"] {
+  padding: 8px 14px;
+  background-color: #1d4ed8;
+  color: #ffffff;
+  border-color: #064E7D;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.footer-top-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.footer-top-social a {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-bottom-legal {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  
+}
+.footer-bottom-legal a{
+    text-decoration: none;
+
+}
+
+.footer-bottom-legal:hover a{
+    text-decoration: none;
+    
+}
+.footer-bottom-cards {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-bottom-img {
+  width: 50px;
+  height: 32px;
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 4px;
+  border-color:var(--amarillo);
+}
+.footer-top-col a
+{
+    color: #99E2DA;
+}
+footer a{
+    text-decoration: none;
+}
+.footer-top-btn{
+    color: #0A8BAA;
+}
+
+
+
+body{
+      background-image: url(../Argentina_\ Sol\ de\ Mayo\ Vintage.png);
+}
+.main__futbol div{
+    display: flex;
+    justify-content: center;
+}
+.main__futbol{
+    background-color: #9AF0E7;
+    width: 950px;
+    margin: 0 auto;
+    
+}
+.main__futbol h2{
+    color: #136079;
+    text-shadow: 1px 1px 3px #000000;
+    height: 500px;
+    padding: 15px;
+  
+
+    
+
+}
+.footer__futbol{
+    
+    background-color:#0b2545 ;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    
+}
