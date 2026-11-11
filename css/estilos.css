@@ -75,10 +75,6 @@ img {
     border: 3px solid var(--rojo4);
     border-radius: 50%;
 }
-
-/* =========================================================
-   3 · LA TARJETA
-   ========================================================= */
 .tarjeta {
     background: var(--violeta-25);
     /*Cambia el color de fondo de la tarjeta*/
@@ -93,10 +89,6 @@ img {
     max-width: 420px;
     /*Establece que la tarjeta no superará los 420 píxeles de ancho, aunque la pantalla sea más grande.*/
 }
-
-/* =========================================================
-   4 · CADA PARTE DE LA TARJETA
-   ========================================================= */
 .tarjeta__logo {
     width: 72px;
     /*Define el ancho fijo del logo en 72 píxeles.*/
@@ -155,7 +147,6 @@ img {
     margin-bottom: 20px;
 }
 
-/* Variante oscura: mismo bloque, otra combinación de la paleta */
 .tarjeta--oscura {
     background: var(--negro-carbon);
     /*Cambia el color de fondo de la tarjeta*/
