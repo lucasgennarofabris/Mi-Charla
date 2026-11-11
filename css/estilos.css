@@ -48,7 +48,7 @@
    ========================================================= */
 body {
     background: var(--blanco);
-    background-image: url(../bandera-de-argentina-argentina-bandera-realista-ilustración-3d.webp);
+    background-image: url(..//bandera-de-argentina-argentina-bandera-realista-ilustración-3d.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -297,7 +297,7 @@ img {
 }
 
 .container {
-
+    
     width: 1000px;
     margin: 0 auto;
     /*Top - Botton son 0px y auto para left y right  */
@@ -531,11 +531,14 @@ footer a{
 .footer-top-btn{
     color: #0A8BAA;
 }
+#ideas{
+    background-image: url(../assets/imagenes/Argentina_\ Sol\ de\ Mayo\ Vintage.png);
+}
 
 
 
 body{
-      background-image: url(../Argentina_\ Sol\ de\ Mayo\ Vintage.png);
+      background-image: url(../assets/imagenes/Argentina_\ Sol\ de\ Mayo\ Vintage.png);
 }
 .main__futbol div{
     display: flex;
