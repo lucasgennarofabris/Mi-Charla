@@ -353,21 +353,27 @@ span {
 .card__enlace:hover {
     background-color: #1e72ab;
 }
-
+header{
+    padding: 15px;
+}
 .container-header {
     background: #edb200;
 background: radial-gradient(circle,rgba(237, 178, 0, 1) 0%, rgba(255, 255, 255, 1) 35%, rgba(31, 240, 226, 1) 98%);
 display: flex;
-justify-content: space-between;
+justify-content: flex-start;
 align-items: center;/*Alinea verticalmente los hijos (nav)*/
+gap: 25px;
 }
-.header__logo{
-    width: 150px;
+.header__logo {
+     width: 150px;
+    
+    
     
     
 }
 .container-header nav{
     padding: 15px;
+     margin-left: auto;
 }
 .container-header nav ul{
     list-style: none; /*List style elimina las viñetas de la lista*/
@@ -385,9 +391,6 @@ align-items: center;/*Alinea verticalmente los hijos (nav)*/
     background-color:var(--blanco);
     padding: 5px;
     border-radius: 5px;
-}
-.header__logo img:hover{
-    padding: 15px;
 }
 
 footer {
@@ -549,6 +552,9 @@ body{
     text-align: justify;
     padding: 15px;
 }
+.main__futbol img{
+        width: 450px;
+}
 .main__futbol h1{
     color: #042f3d;
     text-shadow:1px 1px 3px #000000;
@@ -585,4 +591,27 @@ body{
   width: 150px;              
   height: 150px;
   border-radius: 50%
+}
+header h1{
+    color: #127b9e;
+    margin: 0;
+    font-size: 2rem;
+}
+main div{
+    padding: 15px;
+}
+.main__charla{
+    background-color: rgb(206, 255, 253);
+}
+.main__charla h1{
+    color: #064E7D;
+    display: flex;
+    justify-content: center;
+}
+.section__charla img{
+    border: 0;
+    border-radius: 0;
+    width: 150px;
+    display: flex;
+    justify-content: center;
 }
